@@ -35,9 +35,12 @@ class PostController extends AdminController
 //            $grid->column('view', '浏览数');
             $grid->column('created_at');
             $grid->createMode(Grid::CREATE_MODE_DEFAULT);
-            $grid->showQuickEditButton(false);
+            //$grid->showQuickEditButton(true);
+
+            $grid->disableQuickEditButton();
             $grid->actions(function (\Dcat\Admin\Grid\Displayers\Actions $actions) {
                 $actions->disableEdit(false);
+                $actions->disableDelete(false);
                 $actions->append(new SendEmail());
             });
         });

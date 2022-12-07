@@ -35,7 +35,7 @@
     @if ($method != 'GET')
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
     @endif
-    
+
     <!-- /.box-body -->
     @if($buttons['submit'] || $buttons['reset'])
     <div class="box-footer row" style="display: flex">

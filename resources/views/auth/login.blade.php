@@ -39,6 +39,7 @@
                         <label class="flex items-center">第三方登陆：</label>
                         <div>
                             <div class="w-1/2 mx-auto">
+
                                 <a href="{{ route('oauth',['driver'=>'github']) }}">
                                     <svg t="1601712219551" class="icon mx-auto" viewBox="0 0 1024 1024" version="1.1"
                                          xmlns="http://www.w3.org/2000/svg" p-id="3279" width="30" height="30">

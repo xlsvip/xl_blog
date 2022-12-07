@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\OauthService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Socialite;
+use Overtrue\LaravelSocialite\Socialite;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class AuthController extends Controller

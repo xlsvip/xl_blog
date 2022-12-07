@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Actions\Grid\SendEmail;
 use App\Admin\Repositories\Tag;
 use Dcat\Admin\Controllers\AdminController;
 use Dcat\Admin\Form;
@@ -20,6 +21,9 @@ class TagController extends AdminController
             $grid->column('id')->sortable();
             $grid->column('name');
             $grid->column('created_at');
+            $grid->actions(function (\Dcat\Admin\Grid\Displayers\Actions $actions) {
+                $actions->disableDelete(false);
+            });
         });
     }
 

@@ -38,9 +38,9 @@ class Search extends Component
     }
 
     /**
-     * @return View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|View
      */
-    public function render(): View
+    public function render()
     {
         $posts = $this->search ? PostModel::where('title', 'like', '%'.$this->search.'%')->paginate(5) : [];
 

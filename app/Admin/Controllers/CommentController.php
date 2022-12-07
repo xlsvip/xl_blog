@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Actions\Grid\SendEmail;
 use App\Admin\Repositories\Comment;
 use Dcat\Admin\Controllers\AdminController;
 use Dcat\Admin\Form;
@@ -23,7 +24,14 @@ class CommentController extends AdminController
                 return $val;
             });
             $grid->column('created_at');
-            $grid->disableActions();
+            $grid->disableQuickEditButton();
+
+            //$grid->disableActions();
+            $grid->actions(function (\Dcat\Admin\Grid\Displayers\Actions $actions) {
+                $actions->disableDelete(false);
+                $actions->disableEdit(false);
+
+            });
         });
     }
 
