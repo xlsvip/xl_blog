@@ -1,13 +1,12 @@
 <?php
 
 /**
- * A helper file for Dcat Admin, to provide autocomplete information to your IDE.
+ * A helper file for Dcat Admin, to provide autocomplete information to your IDE
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
  * @author jqh <841324345@qq.com>
  */
-
 namespace Dcat\Admin {
     use Illuminate\Support\Collection;
 
@@ -46,6 +45,9 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection deleted_at
      * @property Grid\Column|Collection is_link
      * @property Grid\Column|Collection link
+     * @property Grid\Column|Collection post_id
+     * @property Grid\Column|Collection target_id
+     * @property Grid\Column|Collection content
      * @property Grid\Column|Collection uuid
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
@@ -61,12 +63,14 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection tokenable_id
      * @property Grid\Column|Collection abilities
      * @property Grid\Column|Collection last_used_at
-     * @property Grid\Column|Collection content
      * @property Grid\Column|Collection category_id
      * @property Grid\Column|Collection is_hot
      * @property Grid\Column|Collection hot_image
-     * @property Grid\Column|Collection post_id
      * @property Grid\Column|Collection tag_id
+     * @property Grid\Column|Collection breakfast
+     * @property Grid\Column|Collection lunch
+     * @property Grid\Column|Collection dinner
+     * @property Grid\Column|Collection weight
      * @property Grid\Column|Collection ip_address
      * @property Grid\Column|Collection user_agent
      * @property Grid\Column|Collection last_activity
@@ -80,6 +84,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection entry_uuid
      * @property Grid\Column|Collection tag
      * @property Grid\Column|Collection email_verified_at
+     * @property Grid\Column|Collection two_factor_secret
+     * @property Grid\Column|Collection two_factor_recovery_codes
      * @property Grid\Column|Collection profile_photo_path
      *
      * @method Grid\Column|Collection name(string $label = null)
@@ -116,6 +122,9 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection deleted_at(string $label = null)
      * @method Grid\Column|Collection is_link(string $label = null)
      * @method Grid\Column|Collection link(string $label = null)
+     * @method Grid\Column|Collection post_id(string $label = null)
+     * @method Grid\Column|Collection target_id(string $label = null)
+     * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection uuid(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
@@ -131,12 +140,14 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection tokenable_id(string $label = null)
      * @method Grid\Column|Collection abilities(string $label = null)
      * @method Grid\Column|Collection last_used_at(string $label = null)
-     * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection category_id(string $label = null)
      * @method Grid\Column|Collection is_hot(string $label = null)
      * @method Grid\Column|Collection hot_image(string $label = null)
-     * @method Grid\Column|Collection post_id(string $label = null)
      * @method Grid\Column|Collection tag_id(string $label = null)
+     * @method Grid\Column|Collection breakfast(string $label = null)
+     * @method Grid\Column|Collection lunch(string $label = null)
+     * @method Grid\Column|Collection dinner(string $label = null)
+     * @method Grid\Column|Collection weight(string $label = null)
      * @method Grid\Column|Collection ip_address(string $label = null)
      * @method Grid\Column|Collection user_agent(string $label = null)
      * @method Grid\Column|Collection last_activity(string $label = null)
@@ -150,15 +161,13 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection entry_uuid(string $label = null)
      * @method Grid\Column|Collection tag(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
+     * @method Grid\Column|Collection two_factor_secret(string $label = null)
+     * @method Grid\Column|Collection two_factor_recovery_codes(string $label = null)
      * @method Grid\Column|Collection profile_photo_path(string $label = null)
      */
-    class Grid
-    {
-    }
+    class Grid {}
 
-    class MiniGrid extends Grid
-    {
-    }
+    class MiniGrid extends Grid {}
 
     /**
      * @property Show\Field|Collection name
@@ -195,6 +204,9 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection deleted_at
      * @property Show\Field|Collection is_link
      * @property Show\Field|Collection link
+     * @property Show\Field|Collection post_id
+     * @property Show\Field|Collection target_id
+     * @property Show\Field|Collection content
      * @property Show\Field|Collection uuid
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
@@ -210,12 +222,14 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection tokenable_id
      * @property Show\Field|Collection abilities
      * @property Show\Field|Collection last_used_at
-     * @property Show\Field|Collection content
      * @property Show\Field|Collection category_id
      * @property Show\Field|Collection is_hot
      * @property Show\Field|Collection hot_image
-     * @property Show\Field|Collection post_id
      * @property Show\Field|Collection tag_id
+     * @property Show\Field|Collection breakfast
+     * @property Show\Field|Collection lunch
+     * @property Show\Field|Collection dinner
+     * @property Show\Field|Collection weight
      * @property Show\Field|Collection ip_address
      * @property Show\Field|Collection user_agent
      * @property Show\Field|Collection last_activity
@@ -229,6 +243,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection entry_uuid
      * @property Show\Field|Collection tag
      * @property Show\Field|Collection email_verified_at
+     * @property Show\Field|Collection two_factor_secret
+     * @property Show\Field|Collection two_factor_recovery_codes
      * @property Show\Field|Collection profile_photo_path
      *
      * @method Show\Field|Collection name(string $label = null)
@@ -265,6 +281,9 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection deleted_at(string $label = null)
      * @method Show\Field|Collection is_link(string $label = null)
      * @method Show\Field|Collection link(string $label = null)
+     * @method Show\Field|Collection post_id(string $label = null)
+     * @method Show\Field|Collection target_id(string $label = null)
+     * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection uuid(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
@@ -280,12 +299,14 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection tokenable_id(string $label = null)
      * @method Show\Field|Collection abilities(string $label = null)
      * @method Show\Field|Collection last_used_at(string $label = null)
-     * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection category_id(string $label = null)
      * @method Show\Field|Collection is_hot(string $label = null)
      * @method Show\Field|Collection hot_image(string $label = null)
-     * @method Show\Field|Collection post_id(string $label = null)
      * @method Show\Field|Collection tag_id(string $label = null)
+     * @method Show\Field|Collection breakfast(string $label = null)
+     * @method Show\Field|Collection lunch(string $label = null)
+     * @method Show\Field|Collection dinner(string $label = null)
+     * @method Show\Field|Collection weight(string $label = null)
      * @method Show\Field|Collection ip_address(string $label = null)
      * @method Show\Field|Collection user_agent(string $label = null)
      * @method Show\Field|Collection last_activity(string $label = null)
@@ -299,11 +320,11 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection entry_uuid(string $label = null)
      * @method Show\Field|Collection tag(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
+     * @method Show\Field|Collection two_factor_secret(string $label = null)
+     * @method Show\Field|Collection two_factor_recovery_codes(string $label = null)
      * @method Show\Field|Collection profile_photo_path(string $label = null)
      */
-    class Show
-    {
-    }
+    class Show {}
 
     /**
      * @method \App\Admin\Extensions\Form\Fee fee(...$params)
@@ -312,9 +333,7 @@ namespace Dcat\Admin {
      * @method \App\Admin\Extensions\Form\Input ipt(...$params)
      * @method \App\Admin\Extensions\Form\ReviewIcon reviewicon(...$params)
      */
-    class Form
-    {
-    }
+    class Form {}
 
 }
 
@@ -326,18 +345,17 @@ namespace Dcat\Admin\Grid {
      * @method $this selectplus(...$params)
      * @method $this batch_detail(...$params)
      */
-    class Column
-    {
-    }
+    class Column {}
 
-    class Filter
-    {
-    }
+    /**
+     
+     */
+    class Filter {}
 }
 
 namespace Dcat\Admin\Show {
-
-    class Field
-    {
-    }
+    /**
+     
+     */
+    class Field {}
 }

@@ -36,7 +36,8 @@ class PostController extends AdminController
             $grid->column('created_at');
             $grid->createMode(Grid::CREATE_MODE_DEFAULT);
             //$grid->showQuickEditButton(true);
-
+            // 显示批量删除按钮
+            $grid->showBatchDelete();
             $grid->disableQuickEditButton();
             $grid->actions(function (\Dcat\Admin\Grid\Displayers\Actions $actions) {
                 $actions->disableEdit(false);
